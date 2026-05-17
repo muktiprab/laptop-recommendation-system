@@ -6,7 +6,7 @@ import math
 # Page config
 st.set_page_config(
     page_title="Laptopia",
-    page_icon="💻",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -229,7 +229,7 @@ df         = df.reset_index(drop=True)
 # Header
 st.markdown("""
 <div class="laptopia-header">
-    <h1>💻 Laptopia</h1>
+    <h1>Laptopia</h1>
     <p>Find your next laptop — search or discover by preference.</p>
     <p style="color:#444;font-size:0.8rem;margin-top:0.2rem">by Mukti Prabowo</p>
 </div>
