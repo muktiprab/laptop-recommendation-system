@@ -8,6 +8,7 @@ st.set_page_config(
     page_title="Laptopia",
     page_icon="💻",
     layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 # Custom CSS
@@ -15,7 +16,10 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
 
-html, body, [class*="css"] {
+html, body, [class*="css"], .main, .block-container,
+[data-testid="stAppViewContainer"], [data-testid="stApp"],
+[data-testid="stHeader"], [data-testid="stToolbar"],
+[data-testid="stBottom"], section.main {
     font-family: 'DM Sans', sans-serif;
     background-color: #0d0d0d;
     color: #f0f0f0;
@@ -64,17 +68,25 @@ h1, h2, h3 { font-family: 'Syne', sans-serif; }
 }
 
 .stTextInput input {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 10px;
-    color: #f0f0f0;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    border-radius: 10px !important;
+    color: #f0f0f0 !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
+    caret-color: #a3e4ff;
+}
+.stTextInput input::placeholder {
+    color: #555 !important;
 }
 .stTextInput input:focus {
-    border-color: #a3e4ff;
-    box-shadow: 0 0 0 2px rgba(163,228,255,0.1);
+    border-color: #a3e4ff !important;
+    box-shadow: 0 0 0 2px rgba(163,228,255,0.1) !important;
+}
+.stTextInput > div > div {
+    background-color: #1a1a1a !important;
+    border-radius: 10px !important;
 }
 
 .laptop-card {
@@ -169,7 +181,8 @@ h1, h2, h3 { font-family: 'Syne', sans-serif; }
     margin-top: 1rem;
 }
 
-section[data-testid="stSidebar"] {
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] > div {
     background: #111;
     border-right: 1px solid #1e1e1e;
 }
@@ -185,6 +198,17 @@ section[data-testid="stSidebar"] .stCheckbox label {
     text-transform: uppercase;
     color: #555;
     margin: 1.2rem 0 0.5rem;
+}
+.stButton > button {
+    background-color: #1a1a1a !important;
+    color: #ccc !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+}
+.stButton > button:hover {
+    background-color: #252525 !important;
+    border-color: #a3e4ff !important;
+    color: #fff !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -207,6 +231,7 @@ st.markdown("""
 <div class="laptopia-header">
     <h1>💻 Laptopia</h1>
     <p>Find your next laptop — search or discover by preference.</p>
+    <p style="color:#444;font-size:0.8rem;margin-top:0.2rem">by Mukti Prabowo</p>
 </div>
 """, unsafe_allow_html=True)
 
