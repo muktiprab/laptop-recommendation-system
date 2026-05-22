@@ -8,7 +8,7 @@
 
 > A content-based laptop recommendation system built with TF-IDF and Cosine Similarity, deployed as an interactive web app via Streamlit.
 
-🔗 **Live App:** [laptopia-mukti.streamlit.app](https://laptopia-mukti.streamlit.app)
+🔗 **Live App:** [laptopia-mukti.streamlit.app](https://laptop-recommendation-mukti.streamlit.app/)
 
 ---
 
